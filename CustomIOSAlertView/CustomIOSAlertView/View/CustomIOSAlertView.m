@@ -208,18 +208,22 @@ CGFloat buttonSpacerHeight = 0;
     // First, we style the dialog to match the iOS7 UIAlertView >>>
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = dialogContainer.bounds;
+//    gradient.colors = [NSArray arrayWithObjects:
+//                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
+//                       (id)[[UIColor colorWithRed:233.0/255.0 green:233.0/255.0 blue:233.0/255.0 alpha:1.0f] CGColor],
+//                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
+//                       nil];
     gradient.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
-                       (id)[[UIColor colorWithRed:233.0/255.0 green:233.0/255.0 blue:233.0/255.0 alpha:1.0f] CGColor],
-                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
-                       nil];
+                       (id)[[UIColor whiteColor] CGColor],
+                       (id)[[UIColor whiteColor] CGColor],nil];
 
     CGFloat cornerRadius = kCustomIOSAlertViewCornerRadius;
     gradient.cornerRadius = cornerRadius;
     [dialogContainer.layer insertSublayer:gradient atIndex:0];
 
     dialogContainer.layer.cornerRadius = cornerRadius;
-    dialogContainer.layer.borderColor = [[UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f] CGColor];
+//    dialogContainer.layer.borderColor = [[UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f] CGColor];
+    dialogContainer.layer.borderColor = [UIColor whiteColor].CGColor;
     dialogContainer.layer.borderWidth = 1;
     dialogContainer.layer.shadowRadius = cornerRadius + 5;
     dialogContainer.layer.shadowOpacity = 0.1f;
