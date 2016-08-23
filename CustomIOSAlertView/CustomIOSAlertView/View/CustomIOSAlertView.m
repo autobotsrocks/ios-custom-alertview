@@ -267,10 +267,17 @@ CGFloat buttonSpacerHeight = 0;
         [closeButton setTitleColor:[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:0.5f] forState:UIControlStateHighlighted];
         [closeButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
         closeButton.titleLabel.numberOfLines = 0;
+        
         closeButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         [closeButton.layer setCornerRadius:kCustomIOSAlertViewCornerRadius];
 
         [container addSubview:closeButton];
+        
+        if(i != [buttonTitles count] - 1) {
+            UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(closeButton.frame.size.width - 1, 0, 1, closeButton.frame.size.height)];
+            leftBorder.backgroundColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.88 alpha:1.00];
+            [closeButton addSubview:leftBorder];
+        }
     }
 }
 
