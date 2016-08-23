@@ -274,8 +274,8 @@ CGFloat buttonSpacerHeight = 0;
         [container addSubview:closeButton];
         
         if(i != [buttonTitles count] - 1) {
-            UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(closeButton.frame.size.width - 1, 0, 1, closeButton.frame.size.height)];
-            leftBorder.backgroundColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.88 alpha:1.00];
+            UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(closeButton.frame.size.width - 1, 0, 1, closeButton.frame.size.height+1)];
+            leftBorder.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.00];
             [closeButton addSubview:leftBorder];
         }
     }
