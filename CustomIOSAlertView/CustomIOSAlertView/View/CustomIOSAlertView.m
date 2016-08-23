@@ -222,7 +222,7 @@ CGFloat buttonSpacerHeight = 0;
     [dialogContainer.layer insertSublayer:gradient atIndex:0];
 
     dialogContainer.layer.cornerRadius = cornerRadius;
-//    dialogContainer.layer.borderColor = [[UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f] CGColor];
+    dialogContainer.layer.borderColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.00].CGColor;
     dialogContainer.layer.borderColor = [UIColor whiteColor].CGColor;
     dialogContainer.layer.borderWidth = 1;
     dialogContainer.layer.shadowRadius = cornerRadius + 5;
@@ -274,7 +274,7 @@ CGFloat buttonSpacerHeight = 0;
         [container addSubview:closeButton];
         
         if(i != [buttonTitles count] - 1) {
-            UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(closeButton.frame.size.width - 1, 0, 1, closeButton.frame.size.height+1)];
+            UIView *leftBorder = [[UIView alloc] initWithFrame:CGRectMake(closeButton.frame.size.width - 1, 0, 1, closeButton.frame.size.height)];
             leftBorder.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.00];
             [closeButton addSubview:leftBorder];
         }
